@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+        <script defer src="{{ url_for('static', filename='js/main.js') }}" > </script>
+    </head>
+    <body>
+    <header id="header" class="header">
+    <img id="banner" src="{{ url_for('static', filename='images/banner.png')}}" />
+    <div class="banner-text">
+    CodingJQ: the Blog
+    </div>
+    <div class="banner-overlay">
+    Visit youtube.com/@codingjq
+    </div>
+    </header>
+    
+    <main>
+
+    {% for entry in blog_entries %}
+    <div class="blog-entry-block">
+    <div class="blog-title-block">
+    <div class="blog-entry-title">
+    {{entry.title}}
+    </div>
+    <div class="blog-entry-date">
+    {{entry.date_created}}
+    </div>
+    </div>
+    <div class="blog-entry-text">
+    {{entry.entry_text[0:1000]}} 
+    <a href="posts/{blog_entry.id}"> Read More.... </a>
+    </div> 
+    </div>
+{% endfor %}
+
+    </main>
+    <footer>
+    This is the Footer
+    </footer>
+    </body>
+
+    
+</html>
