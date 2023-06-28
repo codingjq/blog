@@ -11,7 +11,7 @@ If you read the tweet thread linked above, I suggested using a Flask backend sin
 
 ## TODO:
 
--Clean up styling (especially text responsiveness to screen size)
--Write some real entries
--Implement markdown parsing
--Make the "new entry" and "entry edit pages" secure. For now, I will just expose the new entry page only to localhost and the blog home and individual posts to the world. 
+-Clean up styling (especially text responsiveness to screen size)  
+-Write some real entries  
+-Implement markdown parsing  
+-Make the "new entry" and "entry edit pages" secure. For now, I will just expose the new entry page only to localhost and the blog home and individual posts to the world.   
